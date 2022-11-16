@@ -7,7 +7,7 @@ function App() {
   const [food, setFood] = useState(foods);
   return (
     <div className="App">
-      {food.map((oneFood) => {
+      {/* {food.map((oneFood) => {
         return (
           <>
             <p>{oneFood.name}</p>
@@ -18,15 +18,11 @@ function App() {
             />
           </>
         );
+      })} */}
+      {food.map((theFood) => {
+        return <FoodBox food={theFood} />;
       })}
-      <FoodBox
-        food={{
-          name: 'Orange',
-          calories: 85,
-          image: 'https://i.imgur.com/abKGOcv.jpg',
-          servings: 1,
-        }}
-      />
+
       <Button> Hide Form / Add New Food </Button>
       <div></div>
       {/* Display Search component here */}
